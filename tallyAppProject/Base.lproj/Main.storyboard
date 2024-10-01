@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tallyAppProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0p-4W-6yu">
+                                <rect key="frame" x="160" y="354" width="73" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J94-i5-IQH">
+                                <rect key="frame" x="338.33333333333331" y="91" width="38.666666666666686" height="52.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="pzS-pW-A3q" kind="presentation" id="pnu-nd-F8T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J94-i5-IQH" secondAttribute="trailing" constant="16" id="2xT-fg-lgv"/>
+                            <constraint firstItem="I0p-4W-6yu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OOW-mi-nvt"/>
+                            <constraint firstItem="J94-i5-IQH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="qPH-m1-xSG"/>
+                            <constraint firstItem="I0p-4W-6yu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zwA-Sj-DXT"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mM8-og-Wbp" appends="YES" id="N70-Li-Uu0"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vtj-WM-k05"/>
+                    <connections>
+                        <outlet property="countLabel" destination="I0p-4W-6yu" id="feC-bq-mn6"/>
+                        <outlet property="intervalButton" destination="J94-i5-IQH" id="Yw8-H9-6xE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mM8-og-Wbp">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="DCy-wx-nJD"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+        <!--New Interval View Controller-->
+        <scene sceneID="6j0-2T-9pM">
+            <objects>
+                <viewController id="pzS-pW-A3q" customClass="NewIntervalViewController" customModule="tallyAppProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RNy-RV-Y80">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="Os7-dz-Yd0">
+                                <rect key="frame" x="125.00000000000001" y="359" width="143.33333333333337" height="124"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Interval" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="21X-AV-37G">
+                                        <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Bj7-XV-EYf"/>
+                                            <constraint firstAttribute="width" constant="143.33000000000001" id="Q35-3f-FC5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="intervalChange:" destination="cvE-Bu-vjz" eventType="editingDidEnd" id="CC8-C6-Khv"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dio-eJ-D4X">
+                                        <rect key="frame" x="41.333333333333343" y="80" width="60.333333333333343" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Set">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="setIntervalButton:" destination="cvE-Bu-vjz" eventType="touchUpInside" id="u74-0R-Vqb"/>
+                                            <segue destination="cvE-Bu-vjz" kind="unwind" unwindAction="unwindToTallyViewControllerWithSegue:" id="4Eg-3j-EFo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KHd-N9-emg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Os7-dz-Yd0" firstAttribute="centerX" secondItem="RNy-RV-Y80" secondAttribute="centerX" id="U2D-bi-sTc"/>
+                            <constraint firstItem="Os7-dz-Yd0" firstAttribute="centerY" secondItem="RNy-RV-Y80" secondAttribute="centerY" id="bUf-TF-vhk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="intervalTextField" destination="21X-AV-37G" id="ohW-RK-Ckg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1k-VM-i33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cvE-Bu-vjz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="791.60305343511448" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
